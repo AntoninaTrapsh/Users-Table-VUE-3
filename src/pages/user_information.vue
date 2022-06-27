@@ -90,12 +90,9 @@ export default {
 
       this.sortTable(this.users, sortKey);
     },
-    beforeWindowUnload(e) {
+    beforeWindowUnload() {
         localStorage.setItem('users', JSON.stringify(this.users));
         localStorage.setItem('head-list', JSON.stringify(this.headList));
-        e.preventDefault();
-        e.returnValue = '';
-
     },
   },
   created() {
